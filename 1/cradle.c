@@ -3,7 +3,7 @@
 #include <stdlib.h>
 
 
-void GetChar() 
+void GetChar()
 {
     Look = getchar();
 }
@@ -23,6 +23,7 @@ void Abort(char *s)
 
 void Expected(char *s)
 {
+    // The first arg specify the buffer to store formatted string.
     sprintf(tmp, "%s Expected", s);
     Abort(tmp);
 }
@@ -42,7 +43,7 @@ void Match(char x)
 int IsAlpha(char c)
 {
     return (UPCASE(c) >= 'A') && (UPCASE(c) <= 'Z');
-} 
+}
 
 int IsDigit(char c)
 {
@@ -94,4 +95,3 @@ void Init()
 {
     GetChar();
 }
-
